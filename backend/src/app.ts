@@ -1,6 +1,7 @@
 import express, { NextFunction, Request, Response } from "express";
 import "dotenv/config";
-
+import quizRoutes from "./routes/quizRoutes";
+import announcementRoutes from "./routes/announcementRoutes";
 import morgan from "morgan";
 import createHttpError, { isHttpError } from "http-errors";
 
@@ -8,6 +9,11 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan("dev"));
+
+//TODO: add user modal ,route and session base authentication
+
+app.use("/quizzes", quizRoutes);
+app.use("/announcements", announcementRoutes);
 
 //end point not found error handler
 app.use((req, res, next) => {
