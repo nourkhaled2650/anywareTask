@@ -4,12 +4,19 @@ import quizRoutes from "./routes/quizRoutes";
 import announcementRoutes from "./routes/announcementRoutes";
 import morgan from "morgan";
 import createHttpError, { isHttpError } from "http-errors";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
 app.use(morgan("dev"));
-
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["POST", "GET", "DELETE", "PATCH"],
+    credentials: true,
+  })
+);
 //TODO: add user modal ,route and session base authentication
 
 app.use("/quizzes", quizRoutes);
