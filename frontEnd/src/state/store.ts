@@ -2,8 +2,10 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { quizApiSlice } from "./serverState/quizApi";
 import { announcementApiSlice } from "./serverState/announcementApi";
 import tipsReducer from "./clientState/tipsSlice";
+import userReducer from "./clientState/userSlice";
 const rootReducer = combineReducers({
   tips: tipsReducer,
+  user: userReducer,
   [quizApiSlice.reducerPath]: quizApiSlice.reducer,
   [announcementApiSlice.reducerPath]: announcementApiSlice.reducer,
 });
