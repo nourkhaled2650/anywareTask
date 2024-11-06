@@ -25,7 +25,7 @@ export const SidebarItem = ({
       sx={{
         cursor: "pointer",
         width: "100%",
-        color: `${activeLink ? "secondary.main" : "background.default"}`,
+        color: `${activeLink ? "secondary.main" : "background.paper"}`,
         display: "flex",
         alignItems: "center",
         justifyContent: { sm: "center", md: "start", xs: "start" },
@@ -34,7 +34,7 @@ export const SidebarItem = ({
         gap: 2,
         fontSize: 25,
         fontWeight: `${activeLink ? "bold" : "light"}`,
-        bgcolor: `${activeLink ? "background.default" : ""}`,
+        bgcolor: `${activeLink ? "background.paper" : ""}`,
         "&:hover": {
           bgcolor: "background.default",
           color: "secondary.main",
