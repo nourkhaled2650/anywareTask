@@ -23,7 +23,7 @@ export const Navbar = () => {
       <Typography
         variant="h2"
         sx={{
-          color: "text.secondary",
+          color: "text.primary",
           fontSize: { xs: "20px", md: "30px" },
           fontWeight: "bold",
         }}
@@ -71,7 +71,7 @@ export const Navbar = () => {
           }}
         >
           <img
-            src="/profile.jpg"
+            src="/profile.jpeg"
             style={{
               width: "100%",
               height: "100%",

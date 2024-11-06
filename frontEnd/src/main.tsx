@@ -13,8 +13,8 @@ const theme = createTheme({
     secondary: { main: "#4EC7B7" },
     background: { default: "#ebeced", paper: "#FFFFFF" },
     text: {
-      primary: "#333333",
-      secondary: "#555555",
+      primary: "#525252",
+      secondary: "#9c9c9c",
     },
   },
 });

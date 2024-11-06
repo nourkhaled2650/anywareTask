@@ -30,7 +30,7 @@ export const SidebarItem = ({
         alignItems: "center",
         justifyContent: { sm: "center", md: "start", xs: "start" },
         paddingY: { xs: 3, md: 2 },
-        paddingX: { xs: 2, sm: 0, md: 2 },
+        paddingX: 2,
         gap: 2,
         fontSize: 25,
         fontWeight: `${activeLink ? "bold" : "light"}`,

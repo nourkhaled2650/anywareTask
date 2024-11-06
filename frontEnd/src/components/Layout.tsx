@@ -10,11 +10,13 @@ const Layout = () => {
       spacing={2}
       sx={{
         bgcolor: "background.default",
+        height: "100%",
         minHeight: "100vh",
       }}
     >
       <Grid
         sx={{
+          position: "relative",
           display: { xs: "none", sm: "flex" },
           width: "10vw",
           minWidth: "50px",
@@ -27,7 +29,7 @@ const Layout = () => {
       </Grid>
       <Grid
         sx={{
-          width: "60%",
+          width: "1px",
           minHeight: "calc(100vh - 10vh)",
           flexGrow: 1,
         }}

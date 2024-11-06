@@ -6,12 +6,15 @@ import Quizzes from "../components/Quizzes";
 
 const Dashboard = requireAuth(() => {
   return (
-    <Grid container spacing={2}>
+    <Grid sx={{ height: "" }} container spacing={2}>
       <Grid size={{ xs: 12 }}>
         <Tips />
       </Grid>
       <Grid
-        sx={{ border: "4px solid green", order: { xs: 2, sm: 1 } }}
+        sx={{
+          overflow: "auto",
+          order: { xs: 2, sm: 1 },
+        }}
         size={{ xs: 12, sm: 8 }}
       >
         <Announcements />

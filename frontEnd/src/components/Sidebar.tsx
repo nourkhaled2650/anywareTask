@@ -9,10 +9,11 @@ import InsightsIcon from "@mui/icons-material/Insights";
 const Sidebar = () => {
   return (
     <Box
+      component={"aside"}
       sx={{
+        position: "fixed",
+        minHeight: "100vh",
         background: "linear-gradient(to bottom,#013b45, #4EC7B7)",
-        width: "100%",
-        height: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

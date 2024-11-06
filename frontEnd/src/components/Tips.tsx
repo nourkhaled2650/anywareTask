@@ -37,22 +37,28 @@ const Tips = () => {
             fontWeight: "bold",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
+            fontFamily: "cursive",
           }}
         >
           Exams Time
         </Typography>
-        <Typography sx={{ color: "text.secondary" }}>
+        <Typography sx={{ color: "text.primary" }}>
           Here we are, Are you ready for fight? Don't worry, we prepared some
           tips to be ready for your exams.
         </Typography>
         {!showAll && (
-          <Typography sx={{ color: "gray" }}>
+          <Typography
+            sx={{ color: "text.secondary", fontFamily: "revert-layer" }}
+          >
             {activeTip.text} {activeTip.author}
           </Typography>
         )}
         {showAll &&
           tips.map((tip) => (
-            <Typography sx={{ color: "gray" }}>
+            <Typography
+              key={tip.id}
+              sx={{ color: "text.secondary", fontFamily: "revert-layer" }}
+            >
               {tip.text} {tip.author}
             </Typography>
           ))}
@@ -72,7 +78,8 @@ const Tips = () => {
       <Box
         sx={{
           width: { xs: "100%", sm: "30%" },
-          height: "200px",
+          height: "100%",
+          minHeight: "200px",
           order: { xs: 1, sm: 2 },
         }}
       >
