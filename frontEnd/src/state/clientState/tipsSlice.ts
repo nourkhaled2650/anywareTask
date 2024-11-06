@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface Tip {
+export interface Tip {
   id: number;
   text: string;
   author: string;

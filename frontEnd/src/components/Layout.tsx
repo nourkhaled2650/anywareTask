@@ -16,6 +16,7 @@ const Layout = () => {
       <Grid
         sx={{
           display: { xs: "none", sm: "flex" },
+          width: "10vw",
           minWidth: "50px",
           maxWidth: "250px",
           minHeight: "100vh",
@@ -26,6 +27,7 @@ const Layout = () => {
       </Grid>
       <Grid
         sx={{
+          width: "60%",
           minHeight: "calc(100vh - 10vh)",
           flexGrow: 1,
         }}
