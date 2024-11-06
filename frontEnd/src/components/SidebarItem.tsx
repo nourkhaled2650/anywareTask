@@ -1,0 +1,56 @@
+import { Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import { ReactNode } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
+export const SidebarItem = ({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: ReactNode;
+}) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const activeLink = location.pathname === href;
+
+  const handleClick = () => {
+    navigate(href);
+  };
+  return (
+    <Box
+      onClick={handleClick}
+      sx={{
+        cursor: "pointer",
+        width: "100%",
+        color: `${activeLink ? "secondary.main" : "background.default"}`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: { sm: "center", md: "start", xs: "start" },
+        paddingY: { xs: 3, md: 2 },
+        paddingX: { xs: 2, sm: 0, md: 2 },
+        gap: 2,
+        fontSize: 25,
+        fontWeight: `${activeLink ? "bold" : "light"}`,
+        bgcolor: `${activeLink ? "background.default" : ""}`,
+        "&:hover": {
+          bgcolor: "background.default",
+          color: "secondary.main",
+        },
+      }}
+    >
+      {children}
+      <Typography
+        variant="h6"
+        sx={{
+          display: { xs: "flex", md: "flex", sm: "none" },
+          fontSize: { md: 20, lg: 25 },
+        }}
+      >
+        {label}
+      </Typography>
+    </Box>
+  );
+};

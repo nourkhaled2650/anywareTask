@@ -9,9 +9,9 @@ import "./index.css";
 import "./utils/i18n.ts";
 const theme = createTheme({
   palette: {
-    primary: { main: "#004a57" },
-    secondary: { main: "#1f6d99" },
-    background: { default: "#F8FAFB", paper: "#FFFFFF" },
+    primary: { main: "#013b45" },
+    secondary: { main: "#4EC7B7" },
+    background: { default: "#ebeced", paper: "#FFFFFF" },
     text: {
       primary: "#333333",
       secondary: "#555555",

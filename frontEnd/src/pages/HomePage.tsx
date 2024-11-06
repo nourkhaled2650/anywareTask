@@ -12,11 +12,11 @@ const HomePage = () => {
     if (isLoggedIn) {
       navigate("/dashboard");
     }
-  }, [isLoggedIn]);
+  }, [isLoggedIn, navigate]);
   return (
     <Box
       sx={{
-        background: "linear-gradient(to bottom, #2c5f87, #49a3b7)",
+        background: "linear-gradient(to bottom,#013b45, #4EC7B7)",
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",

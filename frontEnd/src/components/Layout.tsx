@@ -9,7 +9,7 @@ const Layout = () => {
       container
       spacing={2}
       sx={{
-        bgcolor: "primary",
+        bgcolor: "background.default",
         minHeight: "100vh",
       }}
     >
