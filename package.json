@@ -1,0 +1,13 @@
+{
+  "name": "anyware_task",
+  "version": "1.0.0",
+  "scripts": {
+    "install": "cd ./backEnd && npm install && cd ../frontEnd && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {},
+  "dependencies": {}
+}
