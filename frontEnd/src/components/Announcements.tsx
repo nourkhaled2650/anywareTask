@@ -26,6 +26,7 @@ const Announcements = () => {
           color: "text.primary",
           fontWeight: "bold",
           fontSize: { xs: 20, md: 25 },
+          paddingTop: 1,
         }}
       >
         Announcements
@@ -33,7 +34,7 @@ const Announcements = () => {
       <Typography sx={{ color: "text.secondary" }}>
         Recent Updates, You are missing something.
       </Typography>
-      <Box sx={{ padding: 1 }}>
+      <Box sx={{ padding: { md: 1 } }}>
         {isError && (
           <SecondaryFont label="Sorry! Couldn't fetch the Announcements, make sure server is runner" />
         )}

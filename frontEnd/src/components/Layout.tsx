@@ -1,20 +1,20 @@
+import Box from "@mui/material/Box";
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import Sidebar from "./Sidebar";
-import Grid from "@mui/material/Grid2";
 
 const Layout = () => {
   return (
-    <Grid
-      container
-      spacing={2}
+    <Box
       sx={{
+        display: "flex",
         bgcolor: "background.default",
+        gap: { xs: 1, md: 2 },
         height: "100%",
         minHeight: "100vh",
       }}
     >
-      <Grid
+      <Box
         sx={{
           position: "relative",
           display: { xs: "none", sm: "flex" },
@@ -22,11 +22,10 @@ const Layout = () => {
           maxWidth: "250px",
           minHeight: "100vh",
         }}
-        size={{ sm: 1, md: 3 }}
       >
         <Sidebar />
-      </Grid>
-      <Grid
+      </Box>
+      <Box
         sx={{
           width: "1px",
           minHeight: "calc(100vh - 10vh)",
@@ -35,8 +34,8 @@ const Layout = () => {
       >
         <Navbar />
         <Outlet />
-      </Grid>
-    </Grid>
+      </Box>
+    </Box>
   );
 };
 export default Layout;

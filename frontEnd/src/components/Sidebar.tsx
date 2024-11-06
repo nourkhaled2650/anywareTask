@@ -11,7 +11,7 @@ const Sidebar = () => {
     <Box
       component={"aside"}
       sx={{
-        position: "fixed",
+        // position: "fixed",
         minHeight: "100vh",
         background: "linear-gradient(to bottom,#013b45, #4EC7B7)",
         display: "flex",

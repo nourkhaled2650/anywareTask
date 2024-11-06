@@ -21,6 +21,7 @@ const Quizzes = () => {
           color: "text.primary",
           fontWeight: "bold",
           fontSize: { xs: 20, md: 25 },
+          paddingTop: 1,
         }}
       >
         What's due
@@ -30,7 +31,7 @@ const Quizzes = () => {
       </Typography>
       <Box
         sx={{
-          padding: 1,
+          padding: { md: 1 },
           display: "flex",
           flexDirection: "column",
           gap: 2,

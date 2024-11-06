@@ -6,7 +6,7 @@ export const HeaderFont = ({ label }: { label: string }) => {
       sx={{
         color: "text.primary",
         fontWeight: "bold",
-        fontSize: { xs: 12, md: 14 },
+        fontSize: { xs: 12, md: 16 },
       }}
     >
       {label}

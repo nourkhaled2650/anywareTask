@@ -34,7 +34,7 @@ export const QuizItem = ({
           fontWeight: "bold",
           color: "secondary.main",
           borderColor: "secondary.main",
-          fontSize: "25",
+          fontSize: { sm: 10, md: 14 },
           "&:hover": {
             borderColor: "primary.main",
           },

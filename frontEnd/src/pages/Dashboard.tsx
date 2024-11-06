@@ -6,7 +6,7 @@ import Quizzes from "../components/Quizzes";
 
 const Dashboard = requireAuth(() => {
   return (
-    <Grid sx={{ height: "" }} container spacing={2}>
+    <Grid sx={{ height: "" }} container spacing={{ xs: 1, md: 2 }}>
       <Grid size={{ xs: 12 }}>
         <Tips />
       </Grid>
