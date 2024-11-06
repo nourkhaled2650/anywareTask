@@ -1,4 +1,6 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { HeaderFont } from "./HeaderFont";
+import { SecondaryFont } from "./SecondaryFont";
 
 interface ItemProps {
   author: string;
@@ -7,7 +9,7 @@ interface ItemProps {
 }
 export const AnnouncementItem = ({ author, role, message }: ItemProps) => {
   return (
-    <Box sx={{ display: "flex", gap: 2, alignItems: "center", paddingY: 1 }}>
+    <Box sx={{ display: "flex", gap: 1, alignItems: "center", paddingY: 1 }}>
       <Box
         sx={{
           whiteSpaceidth: { xs: "30px", md: "40px" },
@@ -26,34 +28,10 @@ export const AnnouncementItem = ({ author, role, message }: ItemProps) => {
         />
       </Box>
       <Box>
-        <Typography
-          sx={{
-            color: "text.primary",
-            fontWeight: "bold",
-            fontSize: { xs: 12, md: 14 },
-          }}
-        >
-          {author}
-        </Typography>
-        <Typography
-          sx={{
-            color: "text.secondary",
-            fontWeight: "light",
-            fontSize: { xs: 12, md: 16 },
-          }}
-        >
-          {role}
-        </Typography>
+        <HeaderFont label={author} />
+        <SecondaryFont label={role} />
       </Box>
-      <Typography
-        sx={{
-          color: "text.secondary",
-          fontWeight: "light",
-          fontSize: { xs: 12, md: 16 },
-        }}
-      >
-        {message}
-      </Typography>
+      <SecondaryFont label={message} />
     </Box>
   );
 };

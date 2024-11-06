@@ -46,7 +46,6 @@ export const SidebarItem = ({
         variant="h6"
         sx={{
           display: { xs: "flex", md: "flex", sm: "none" },
-          fontSize: { md: 20, lg: 25 },
         }}
       >
         {label}

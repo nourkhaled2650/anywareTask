@@ -19,10 +19,7 @@ const Dashboard = requireAuth(() => {
       >
         <Announcements />
       </Grid>
-      <Grid
-        sx={{ border: "4px solid yellow", order: { xs: 1, sm: 2 } }}
-        size={{ xs: 12, sm: 3 }}
-      >
+      <Grid sx={{ order: { xs: 1, sm: 2 } }} size={{ xs: 12, sm: 3 }}>
         <Quizzes />
       </Grid>
     </Grid>

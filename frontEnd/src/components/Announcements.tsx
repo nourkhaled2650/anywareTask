@@ -1,12 +1,15 @@
-import { Box, Button, CircularProgress, Typography } from "@mui/material";
+import { Box, CircularProgress, Typography } from "@mui/material";
 import { useGetAnnouncementsQuery } from "../state/serverState/announcementApi";
+import { AllButton } from "./AllButton";
 import { AnnouncementItem } from "./AnnouncementItem";
+import { SecondaryFont } from "./SecondaryFont";
 
 const Announcements = () => {
   const {
     data: announcements,
     isLoading,
     isSuccess,
+    isError,
   } = useGetAnnouncementsQuery();
   return (
     <Box
@@ -22,7 +25,7 @@ const Announcements = () => {
         sx={{
           color: "text.primary",
           fontWeight: "bold",
-          fontSize: { xs: 20, md: 30 },
+          fontSize: { xs: 20, md: 25 },
         }}
       >
         Announcements
@@ -31,6 +34,9 @@ const Announcements = () => {
         Recent Updates, You are missing something.
       </Typography>
       <Box sx={{ padding: 1 }}>
+        {isError && (
+          <SecondaryFont label="Sorry! Couldn't fetch the Announcements, make sure server is runner" />
+        )}
         {isLoading && <CircularProgress color="secondary" />}
         {isSuccess &&
           announcements.map((annouc) => (
@@ -42,18 +48,7 @@ const Announcements = () => {
             />
           ))}
       </Box>
-      <Button
-        variant="text"
-        sx={{
-          position: "absolute",
-          top: 2,
-          right: 2,
-          color: "secondary.main",
-          fontWeight: "bold",
-        }}
-      >
-        All
-      </Button>
+      <AllButton />
     </Box>
   );
 };

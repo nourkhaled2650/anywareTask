@@ -18,7 +18,6 @@ const Layout = () => {
         sx={{
           position: "relative",
           display: { xs: "none", sm: "flex" },
-          width: "10vw",
           minWidth: "50px",
           maxWidth: "250px",
           minHeight: "100vh",
