@@ -10,8 +10,10 @@ export const AnnouncementItem = ({ author, role, message }: ItemProps) => {
     <Box sx={{ display: "flex", gap: 2, alignItems: "center", paddingY: 1 }}>
       <Box
         sx={{
-          width: { xs: "30px", md: "40px" },
+          whiteSpaceidth: { xs: "30px", md: "40px" },
           height: { xs: "30px", md: "40px" },
+          minWidth: { xs: "30px", md: "40px" },
+          minHeight: { xs: "30px", md: "40px" },
         }}
       >
         <img
@@ -28,7 +30,7 @@ export const AnnouncementItem = ({ author, role, message }: ItemProps) => {
           sx={{
             color: "text.primary",
             fontWeight: "bold",
-            fontSize: { xs: 16, md: 20 },
+            fontSize: { xs: 12, md: 14 },
           }}
         >
           {author}

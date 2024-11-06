@@ -15,13 +15,13 @@ const Dashboard = requireAuth(() => {
           overflow: "auto",
           order: { xs: 2, sm: 1 },
         }}
-        size={{ xs: 12, sm: 8 }}
+        size={{ xs: 12, sm: 9 }}
       >
         <Announcements />
       </Grid>
       <Grid
         sx={{ border: "4px solid yellow", order: { xs: 1, sm: 2 } }}
-        size={{ xs: 12, sm: 4 }}
+        size={{ xs: 12, sm: 3 }}
       >
         <Quizzes />
       </Grid>

@@ -30,7 +30,7 @@ const Announcements = () => {
       <Typography sx={{ color: "text.secondary" }}>
         Recent Updates, You are missing something.
       </Typography>
-      <Box sx={{ padding: 2 }}>
+      <Box sx={{ padding: 1 }}>
         {isLoading && <CircularProgress color="secondary" />}
         {isSuccess &&
           announcements.map((annouc) => (
